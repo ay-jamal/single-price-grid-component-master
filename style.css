@@ -1,0 +1,135 @@
+:root {
+  --main-padding: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Karla", sans-serif;
+
+  background-color: #edf2f7;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  align-items: center;
+  height: 100vh;
+  max-width: 750px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 200px 250px;
+  justify-content: center;
+  box-shadow: 0.1rem 0.1rem 0.9rem 0.2rem rgba(150, 148, 148, 0.25);
+}
+
+.card {
+  padding: var(--main-padding);
+}
+.container .one {
+  grid-column: span 2;
+  background-color: white;
+}
+
+.one .card-title {
+  color: #2ab6c1;
+  font-weight: 700;
+}
+
+.one .text {
+  margin: 15px 0 15px;
+  color: #c0df34;
+  font-weight: 700;
+}
+
+.one .green-text {
+  line-height: 1.8;
+  color: #dec6ca;
+}
+
+.container .two {
+  background-color: hsl(179, 62%, 43%);
+}
+
+.container .two .card-title {
+  margin: 15px 0 15px;
+  color: hsl(204, 43%, 93%);
+  font-weight: 700;
+}
+
+.container .two .price {
+  margin-bottom: 10px;
+}
+
+.container .two .price span {
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.container .two .price {
+  color: #8bcfc6;
+}
+
+.container .two .footer {
+  color: hsl(204, 43%, 93%);
+}
+
+.container .two .btn {
+  text-decoration: none;
+  width: 75%;
+  padding: 10px;
+  color: white;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+  background-color: #c0df34;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.container .two .btn:hover {
+  background-color: #e5eff5;
+  color: #6ccae1;
+}
+
+.container .three {
+  background-color: #3eb9b6;
+}
+
+.container .three .card-title {
+  color: #edf2f7;
+  font-weight: 700;
+  margin: 15px 0 15px;
+  font-size: 22px;
+}
+
+.container .three .body {
+  line-height: 1.7;
+  color: hsl(204, 43%, 93%);
+}
+
+@media (max-width: 767px) {
+  main {
+    height: 90%;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .container {
+    display: block;
+    width: 100%;
+  }
+
+  .container .two .btn {
+    width: 100%;
+  }
+}
